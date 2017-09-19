@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'echo hello Jenkins'
                 sh 'echo hello Jenkins>hello.log'
+                archiveArtifacts artifacts: '*.log', fingerprint: true
                 archiveArtifacts artifacts: '**/*.log', fingerprint: true
             }
         }
