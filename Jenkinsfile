@@ -10,7 +10,10 @@ pipeline {
                 //sh 'go version'
                 sh 'docker version'
                 sh 'docker run --rm golang go version'
-                sh 'docker run --rm golang go run hello_world.go'
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'docker build .'
+                //sh 'docker run --rm golang go run hello_world.go'
             }
         }
     }
